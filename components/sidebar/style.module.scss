@@ -1,0 +1,109 @@
+@import "../../styles/variables";
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 270px;
+  height: 100vh;
+  border: 1px solid $black;
+  box-shadow: 0px 4px 4px $border-light;
+  padding: 4px 12px;
+  z-index: 2;
+  .logo_box {
+    padding: 13px;
+  }
+  .menu {
+    cursor: pointer;
+    padding: 13px;
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    color: #d9d9d9;
+
+    .icon_box {
+      height: 22px;
+      width: 22px;
+      background-color: transparent;
+      img {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+      }
+    }
+    .title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      background-color: transparent;
+    }
+
+    &:hover {
+      background-color: $bg-light-black;
+      border-radius: 200px;
+    }
+    &.active {
+      .title {
+        font-weight: 700;
+      }
+    }
+  }
+  .tweet_btn {
+    background-color: $btn-blue;
+    color: $text-white;
+    border-radius: 52px;
+    padding-block: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 16px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .user_info_box {
+    position: absolute;
+    bottom: 12px;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    .profile_img_box {
+      width: 40px;
+      height: 40px;
+      border: 1px solid $border-light;
+      border-radius: 40px;
+      background-color: transparent;
+    }
+    .info {
+      background-color: transparent;
+      .name {
+        color: $text-white;
+        font-weight: 700;
+        font-size: 15px;
+        background-color: transparent;
+      }
+      .user_name {
+        font-weight: 700;
+        font-size: 15px;
+        color: $text-fade;
+        background-color: transparent;
+      }
+    }
+    .more_option {
+      cursor: pointer;
+      background-color: transparent;
+      img {
+        background-color: transparent;
+      }
+    }
+    &:hover {
+      background-color: $bg-light-black;
+      border-radius: 200px;
+    }
+  }
+}
